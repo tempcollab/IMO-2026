@@ -1,0 +1,1 @@
+ALWAYS: Check whether a witness disjoint from a finite trace is actually disjoint from the full set after the controlling universe is enlarged (because the one-stage finite-anchor argument silently confused these two disjointness claims, round 1).

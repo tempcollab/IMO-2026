@@ -1,0 +1,16 @@
+  progress: 4tuples=200000 feasible=23308 cand=1800 t=2.5s rate=80495/s
+  progress: 4tuples=2400000 feasible=328223 cand=5169 t=31.5s rate=76109/s
+  progress: 4tuples=4800000 feasible=567736 cand=5476 t=63.7s rate=75314/s
+  progress: 4tuples=5000000 feasible=573566 cand=5476 t=66.4s rate=75303/s
+  progress: 4tuples=6200000 feasible=654846 cand=6008 t=82.2s rate=75461/s
+  progress: 4tuples=6800000 feasible=692313 cand=6008 t=90.1s rate=75448/s
+  progress: 4tuples=7400000 feasible=742030 cand=6008 t=98.3s rate=75278/s
+=== n=4 FLOAT pass ===
+4-tuples examined: 10429650
+feasible (nonneg, float): 839787
+candidates (A <= 1+eps): 6008
+A violations (A<1-eps): 0
+min A (float): 0.9999999999997897
+min config: ((0, 0, 1, 2, 1), (10, 22, 35, 38), [np.float64(8.000000000000002), np.float64(8.000000000000002), np.float64(4.000000000000142), np.float64(4.00000000000011), np.float64(2.0000000000000333), np.float64(2.0000000000000155), np.float64(1.9999999999998055), np.float64(1.0), np.float64(-6.550315845288424e-14)])
+total float time: 138.5s, rate 75326/s
+Fraction verify rate: 9389.5/s; verifying all 6008 candidates would take 0.6s

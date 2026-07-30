@@ -1,0 +1,50 @@
+{
+  "discrepancy-halving": {
+    "copied_from": null,
+    "elo": 1547.3116876314484,
+    "expanded": 2,
+    "last_note": "APPROVED solved: U(m) closed in full generality (Lemma B pigeonhole + Lemma W walk), reduction and both bounds verified independently; c(n)=2^n/(2^{n+1}-1); current.md flipped to solved.",
+    "last_outcome": "verified-milestone",
+    "last_round": 4,
+    "selected": 1,
+    "slug": "discrepancy-halving",
+    "stale": true,
+    "summary": "Potential-function framing: Liu = 1/2 + Delta/2 with Delta the sorted alternating discrepancy; theorem iff minimax Delta = 1/(2^{n+1}-1); halving lemma (upper) + global surplus/flow (lower)."
+  },
+  "discrepancy-halving-bands": {
+    "copied_from": "discrepancy-halving",
+    "elo": 1500.5836850957726,
+    "expanded": 1,
+    "last_note": null,
+    "last_outcome": null,
+    "last_round": null,
+    "selected": 1,
+    "slug": "discrepancy-halving-bands",
+    "stale": false,
+    "summary": "Twin of discrepancy-halving (same certified U(m) spine through Case 3a); fills Case 3b by dyadic-band pigeonhole + band-drop potential + dust termination instead of the ternary subset-sum dichotomy."
+  },
+  "dyadic-recursion-induction": {
+    "copied_from": null,
+    "elo": 1479.9594853877638,
+    "expanded": 0,
+    "last_note": null,
+    "last_outcome": null,
+    "last_round": null,
+    "selected": 1,
+    "slug": "dyadic-recursion-induction",
+    "stale": false,
+    "summary": "Strong induction on n with case split on largest piece a1; exact recursion c(n)=c(n)/2+c(n-1)(1-c(n)); Cases A-C mechanized, Case D open via strengthened cap C(m)."
+  },
+  "tie-structure-variational": {
+    "copied_from": null,
+    "elo": 1472.1790500151844,
+    "expanded": 1,
+    "last_note": "Certified field infrastructure (greedy-claiming, tie-structure V1-V4, layer-cake, mirror-ladder, n=1 end-to-end); own gap M(a) now subsumed by ladder-resists; remaining gaps C/M(b) overlap siblings \u2014 fold-in candidate per its own kill criterion.",
+    "last_outcome": "advanced",
+    "last_round": 1,
+    "selected": 1,
+    "slug": "tie-structure-variational",
+    "stale": false,
+    "summary": "Variational: Xiang's best reply lies on tie strata, giving a finite catalog of structured replies; V(a)=min of linear functionals; outer max solved by smoothing, unique equalizer = dyadic ladder."
+  }
+}

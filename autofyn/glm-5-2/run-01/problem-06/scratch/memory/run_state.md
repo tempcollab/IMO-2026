@@ -1,0 +1,95 @@
+## Goal
+
+Prove **imo-2026-06** (IMO 2026 P6, difficulty 9, number_theory, proof_only).
+
+Statement: Let a_1,a_2,... be an infinite sequence of integers >1. For all n, a_{n+1}
+is the smallest integer > a_n with gcd(a_{n+1}, a_i) > 1 for EVERY i=1..n. Prove there
+exist positive integers T, L with a_{n+T} = a_n + L for all n (eventually periodic up
+to translation).
+
+- Metric: proof-reviewer verdict on a complete rigorous proof.
+- Eval: `cat results/imo-2026-06/current.md` (## Status) + `results/imo-2026-06/approaches/.ranking.json`.
+- Baseline: no approaches exist (unsolved).
+- Target: Status `solved` (proof-reviewer APPROVE, complete rigorous prose proof).
+- Constraint: prose Markdown only (no Lean); rigor rules. NO web/curl/wget.
+
+## Goal Updates
+
+- [2026-07-28] Round 1 start. Problem fixed: imo-2026-06. No prior work.
+- [2026-07-28] Round 3. SOLVED. Discovered via crux-corpus retrieval (aimo-0030 = IMO 2013 SL N5 "good numbers") that the problem's greedy set G has a clean characterization (n∈G ⟺ coprime to none of the smaller G-elements), a similarity theorem (same primes ≤a_1 ⟺ both in/out of G), and CRT periodicity. Proof = characterization → s-substitution (patched one-case-split) → similarity (minimal-counterexample descent) → CRT → Theorem 1. B1' AND B2 closed directly. proof-reviewer APPROVE (verified-milestone). Independently re-verified G=H (0 mismatches, 7 a_1 up to ~6000) + similarity (0 violations) + periodicity from n=1.
+- [2026-07-28] Round 2. No new user message; continued on B1 crux. Ran full flow: 3 explorers → outliner (2 new slugs) → outline-reviewer (ranked, registered 2, retired 2) → 4 builders → 1 reviewer. CONDITIONAL SPINE CERTIFIED (B1' ⟹ periodicity from N). B1' pinpointed as single crux; spacing/v_p/covering coupled + clean value-window REFUTED; duality independent but not closing; frozen-invariant retired. All partial/unsolved.
+
+## Eval History
+
+- [Round 1 baseline] No approaches exist. Status: unsolved.
+- [Round 1] Ran full flow: 3 explorers (parallel) → outliner (5 approaches) → outline-reviewer (ranked, all registered) → 3 builders (bounded-diff-finite-state, periodic-set-iteration, bijection-from-n1) → 1 reviewer.
+  Status: **partial** (current.md). All three verdicts: CHANGES REQUESTED.
+  Ranking (Elo after round 1): bounded-diff-finite-state 1559.7 (advanced) > hitting-set-monovariant 1530.0 (unbuilt) > periodic-set-iteration 1500.2 (advanced) > bijection-from-n1 1470.1 (partial) > compactness-konig-branch 1440.0 (unbuilt).
+  Certified lemmas: bounded-difference.md, universal-small-prime.md, periodic-set-iteration.md (canonical cyclic-successor theorem). cyclic-successor.md marked merge→periodic-set-iteration.md.
+  PROGRESS: solid infrastructure proved & verified. PROBLEM REDUCED to two precisely-located gaps:
+    - B1 (THE crux, kernel stabilization/coincidence): ∃ finite S⊇primes(a_1), L=∏S, N with a_{n+1}=min(A∩(a_n,∞)) for n≥N (no free-rider prime >rad(a_1) shortcuts in (a_n,a_n+R]) AND seed a_N∈A. ALL 3 routes hit this wall.
+    - B2 (secondary, from-n=1): extend periodicity from n≥N to n≥1 (no "prematurely valid" candidate steals greedy for n<N). SEPARATE from B1, not a corollary of injectivity.
+  BOTH bypasses RULED OUT: profinite-compactness (periodic-set) yields a profinite point not a finite-period set containing the orbit; injectivity (bijection) — residue transition not well-defined without B1.
+  PLATEAU risk: field collapsed to single B1 wall in round 1 (single-gap trap).
+- [Round 2] Ran full flow. 3 explorers (hitting-set / konig / new-framing) → outliner (opened `small-prime-window-lemma`, `frozen-invariant-reduce-mod-lcm`; revised `hitting-set-monovariant`; advanced `bounded-diff-finite-state`; retired `compactness-konig-branch`, `bijection-from-n1`) → outline-reviewer (registered 2 new, ranked all 7, EXCLUDED `periodic-set-iteration` from build set as coupled) → 4 builders → 1 reviewer.
+  Status: **partial**. Verdicts: CHANGES REQUESTED ×3 (small-prime-window-lemma, hitting-set-monovariant, bounded-diff-finite-state); RETHINK ×1 (frozen-invariant-reduce-mod-lcm, retired).
+  **BREAKTHROUGH (structural, not metric): the conditional spine is CERTIFIED.** Granting B1' (= "true greedy = small-prime-only greedy" ⟺ "no large-prime shortcut in (a_n,a_n+R]" ⟺ "M_n=M'_n"), the rest of the theorem is FREE: seed a_N∈B automatic (dissolves old B1(b)); small-support family F'_n grows over FIXED FINITE P_R={primes≤R} ⇒ stabilizes by pigeonhole at N ⇒ M'_∞ stable ⇒ A fixed periodic mod L=∏∪M'_∞ (the KERNEL product, e.g. 30 for a_1=15, NOT 30030) ⇒ Theorem 1 ⇒ a_{n+T}=a_n+L for n≥N. Reviewer independently re-derived this. The ONLY remaining gap GIVEN B1' is B2 (from-n=1, empirically universal, unproved).
+  **The crux B1' is now pinpointed to ONE clean claim** with the conditional spine fully certified — round-2's main value.
+  **IMPROVED on mechanism diversity, but 3 of 4 mechanisms are COUPLED.** spacing (small-prime-window), v_p (bounded-diff), covering all bottom out at the SAME wall: "demand ~n vs capacity ~a_n~(L/T)·n with L≥2." The clean value-window (Cov) sufficiency was empirically REFUTED (9927 violations at a_1=15). The transversal-duality mechanism (hitting-set) is genuinely INDEPENDENT (a density refutation wouldn't kill it) but does NOT close B1' (one-prime swap fails; Hall/König inapplicable to hypergraph transversals; 1515/5000 small-prime-bearing hypergraphs have a large-only minimal hitting set — universal-small-prime is necessary but NOT sufficient; the lever must be greedy-specific).
+  **ROUTE RETIRED:** frozen-invariant-reduce-mod-lcm. The aimo-0678 min-of-failing-set monovariant does NOT transfer: w_n=min{m>a_n:m∉B_n} is non-DECREASING (needs frozen sum s_n=a_n+b_n + explicit gcd/lcm recurrence the single-sequence greedy lacks). Recorded as dead-end.
+  **NEW cleanest next-round target — conjecture (C):** `A_n ∩ (a_n, a_n+R] ⊆ B_n` (0 violations over 480+ pairs for all 8 test a_1), STRICTLY STRONGER than B1'. If provable, it closes B1' (and the whole conditional spine).
+  **Rigor flag (non-fatal):** "B1' ⟺ M_n=M'_n" is OVERSTATED by two builders; correct relation is `M_n=M'_n ⟹ B1'` (sufficiency) — A_n\B_n elements from a large-prime MHS need not lie in the window. Use M_n=M'_n as the target claim, not the iff.
+  Ranking (Elo after round 2): bounded-diff-finite-state 1591.3 (advanced, stale) > hitting-set-monovariant 1561.7 (partial, stale) > small-prime-window-lemma 1560.2 (partial, stale) > periodic-set-iteration 1513.1 (advanced, NOT rebuilt — coupled) > frozen-invariant-reduce-mod-lcm 1482.0 (dead-end, retired) > bijection-from-n1 1407.2 (retired) > compactness-konig-branch 1384.4 (retired).
+  7 NEW certified lemmas: cross-intersecting-closure, spacing-fact, value-bound-unkillable-window, small-prime-minimum-in-window, sigma-periodicity (conditional), vp-union-bound (PARTIAL), small-prime-inclusion.
+
+- [Round 3] BREAKTHROUGH — SOLVED. Ran full flow: 3 explorers (shadow-sequence / conjecture-C / B2-from-n1) → outliner (4 new/copy) → outline-reviewer (CUT flagship cross-intersecting-anchor — crux (B) `M'_∞` pairwise cross-intersecting empirically FALSE for a_1=135/105/385 e.g. {2,5}∩{3,7}=∅; registered w-descent-rsmooth + b2-induction-step; retired hitting-set-monovariant) → 2 builders → 1 reviewer (CHANGES REQUESTED both: w-descent Lemma 2 false claim "n≥1⟹b has big prime"; b2 sigma-periodicity T' formula BUGGY, corrected in-place) → builder re-dispatch (patched Lemma 2 one-case-split: k-smooth b⟹x=b) → reviewer v2: APPROVE.
+  **w-descent-rsmooth: SOLVED.** Proof transplants aimo-0030 crux shape (re-proved from scratch, no citation): (Lemma 1) G=H characterization [n∈G ⟺ n coprime to none of smaller G-elements — VERIFIED 0 mismatches, 7 a_1 up to max(G)≈6000]; (Lemma 2 patched) s-substitution [strip primes >a_1, inflate by min power of one small prime to land ≤b; Case 1 k-smooth⟹x=b, Case 2 big-prime⟹x<b]; (Lemma 3) similarity theorem [two ints ≥a_1 with same primes ≤a_1 ⟺ both in/out G — VERIFIED 0 violations] via minimal-counterexample descent whose strict decrease (r<a) comes from the a⟶r move (Cor 1.2) proved from Lemma 1 (= greedy definition ALONE, non-circular); (Lemma 4) CRT periodicity [G is P-periodic, P=∏primes≤a_1] + Theorem 1 ⟹ a_{n+T}=a_n+P from n=1. B1' AND B2 closed directly (similarity stronger than B1'; Theorem 1 no-pre-period gives from-n=1). Purely-smooth regime (a_1∈{175,221,385}, no big primes ever) handled by direct contradiction (r'=r). Final: T=|G*∩[0,P)|, L=P=∏_{p≤a_1,p prime}p (valid, possibly non-minimal; minimal divides it, e.g. a_1=15: 30|30030, (T,L)=(8,30)). Periodicity from n=1 re-confirmed (a_1=6→(1,2), 15→(8,30), 35→(34,210), 77→(18,154), 91→(20,182)).
+  **b2-induction-step: partial (now moot).** B2-given-B1' via CRT-density escape (path β: infinite future APs, exact density ∏(1−1/q)>0, NO re-coupling to refuted (Cov)/v_p wall — the infinite-vs-finite window distinction is real). Seed a_1∈B certified (a1-on-cycle.md). sigma-periodicity T' bug found+corrected (round-2-certified lemma had T'=lcm(T,{p∤L}); correct T'=T·∏{p≤R,p∤L}). Superceded by w-descent's direct solve.
+  **Key corrections this round:** (1) cross-intersecting M'_∞ is FALSE (overclaim from shadow-sequence explorer caught by outline-reviewer); (2) sigma-periodicity T' formula was buggy (caught by proof-reviewer); (3) w-descent v1 false claim patched. Rigor: one builder-claim (SOLVED) was downgraded, patched, re-verified — adversarial loop worked.
+
+## Rules
+
+- ALWAYS: one problem per run = imo-2026-06.
+- ALWAYS: rank every round (outline-reviewer runs every round, no fast-path).
+- NEVER: use web search / web fetch / curl / wget (user constraint).
+- ALWAYS: diversify approaches by FRAMING/ROUTE, not technique (avoid single-gap trap).
+- NEVER: retry the Bertrand/competing-candidate attack on B1 (a single-kernel-prime multiple is not universally admissible; Bertrand compares dyadic ranges, not two candidate integers — refuted round 1).
+- NEVER: retry the profinite-compactness bypass of B1 (yields a profinite point, orbit not contained — ruled out round 1).
+- NEVER: retry the injectivity/residue-transition bypass of B1 (transition not well-defined without B1 — ruled out round 1).
+- ALWAYS: the modulus is L=∏(kernel primes S), a MULTIPLE of rad(a_1) but strictly smaller than ∏_{p≤rad(a_1)}p; periodicity mod rad(a_1) is FALSE (verified a_1=15) — do NOT claim it.
+- ALWAYS: one canonical lemma file per fact; merge duplicates (cyclic-successor.md → periodic-set-iteration.md).
+- REMOVED: the round-1 "next round build compactness-konig-branch" rule (route COLLAPSED into bounded-diff-finite-state, retired round 2 — residue mod M doesn't determine next residue; "unique infinite path" false in both tree interpretations). Salvageable idea "finite-state⇒eventually-periodic" already carried by bounded-diff-finite-state's conditional spine. (round 2)
+- ALWAYS: the conditional spine (B1' ⟹ a_{n+T}=a_n+L for n≥N) is CERTIFIED. The whole theorem now reduces to B1' + B2 (from-n=1). Do NOT re-prove the conditional spine — cite it. Next-round work attacks B1' itself (or B2). (round 2)
+- ALWAYS: the modulus is the KERNEL product `L=∏∪M'_∞` (e.g. 30 for a_1=15), NOT `∏∪F'_∞` (e.g. 30030) — the over-counted all-small-primes product. The minimal-hitting-set family M'_n is the stabilizing object, NOT the full support family F_n (which keeps growing via redundant small primes). (round 2, reinforces round-1)
+- ALWAYS: the cleanest next-round target for B1' is conjecture (C): `A_n ∩ (a_n, a_n+R] ⊆ B_n` (0 violations over 480+ pairs, all 8 test a_1; strictly STRONGER than B1'). The target claim is `M_n=M'_n` (no minimal hitting set uses a prime >R); note `M_n=M'_n ⟹ B1'` is only SUFFICIENCY, not iff. (round 2)
+- NEVER: retry the spacing / v_p / covering value-window (Cov) formulation of B1' — the three mechanisms are COUPLED (shared wall "demand ~n vs capacity ~a_n~(L/T)·n with L≥2") and the clean value-window sufficiency was empirically REFUTED (9927 violations at a_1=15). Spacing gives only a NECESSARY bound (a σ*-term hit by large q ⟹ a_j ≤ a_n+R−q); it does NOT bound the count of touched window slots (that count ~n·ω(m)/R grows with n, wrong direction). (round 2)
+- NEVER: retry the aimo-0678 frozen-invariant / min-of-failing-set monovariant + reduce-mod-lcm shape (route retired: the lever needs a frozen sum s_n=a_n+b_n + explicit gcd/lcm recurrence; the single-sequence greedy has neither, and w_n is non-DECREASING). Also NEVER treat "transition deterministic on the periodic orbit" as a B1' bypass — that determinism IS Theorem 1 re-derived conditional on B1'. (round 2)
+- NEVER: apply Hall/König min-vertex-cover=max-matching duality to a minimal-hitting-set / transversal argument — that duality is for bipartite GRAPHS; hypergraph transversal/set-cover has no min=max identity. "an admissible small-prime candidate exists" does NOT force "every minimal transversal is small-only" (1515/5000 small-bearing hypergraphs have a large-only MHS). The B1' lever must be GREEDY-SPECIFIC, not bare transversal theory. (round 2)
+- ALWAYS: when the crux collapses to a single clean claim (B1'), diversify the MECHANISM on that claim, not just the framing — single-claim ≠ single-mechanism, and 3 of 4 round-2 slugs died together on the spacing wall (single-gap trap at the mechanism level). Push ≥1 approach on a genuinely independent mechanism (transversal-duality survived as independent-but-unclosing; find another). (round 2)
+- ALWAYS: before borrowing a crux move from a corpus analog, empirically test its LOAD-BEARING ingredient exists in the target (e.g. does the analog monovariant have the right monotonicity?) — flag probe-and-retire-if-fails. (round 2)
+
+- ALWAYS: the greedy set G has a clean characterization (Lemma 1, the foundation): n∈G ⟺ n is coprime to NONE of the smaller G-elements (n shares a common factor with every smaller G-element). G⊆H is trivial; H⊆G is the self-sieve property (the load-bearing content). Verified 0 mismatches, 7 a_1 up to max(G)≈6000. This characterization is proved from the greedy definition ALONE — it is the non-circular base for the similarity-theorem descent. (round 3)
+- ALWAYS: the crux-closer is the THRESHOLD RAISE k=a_1 (the value), NOT R=rad(a_1). The rounds-1-2 obstruction (large primes >R=rad(a_1) cause shortcuts) dissolves by raising the threshold to a_1: the similarity theorem "two ints ≥a_1 with same primes ≤a_1 are both in/out of G" is TRUE (0 violations) and gives CRT periodicity mod P=∏primes≤a_1. The R-threshold version was hard; the a_1-threshold version works because a_1≥rad(a_1) absorbs more primes as "small". (round 3)
+- ALWAYS: the minimal-counterexample descent's strict decrease (r<a) comes from the a⟶r move (Cor 1.2: n∉G ⟹ ∃g∈G, g<n, gcd(n,g)=1), NOT from the s-substitution (which only gives r'≤r). Cor 1.2 is proved from Lemma 1 (G=H, greedy definition alone) — non-circular. In the purely-smooth regime (no big primes ever, a_1∈{175,221,385,...}) the s-substitution Case 1 (k-smooth b⟹x=b, r'=r) carries the argument by direct common-small-prime contradiction, no stripping needed. (round 3)
+- ALWAYS: the retrieved crux is a HINT, never a citation. aimo-0030 (IMO 2013 SL N5 "good numbers") is the structural analog whose crux shape (characterization + s-substitution + similarity descent + CRT periodicity) transplants to IMO 2026 P6 — but every step was re-proved from scratch in greedy-sequence language. (round 3)
+- ALWAYS: verify builder SOLVED claims adversarially before accepting — round 3's w-descent v1 self-claimed SOLVED but had a false Lemma-2 claim ("n≥1⟹b has big prime"; counterexample a_1=15,b=18 15-smooth). Downgraded → patched (one-case-split) → re-verified APPROVE. The adversarial reviewer loop is load-bearing. (round 3)
+- NEVER: claim `M'_∞` is pairwise cross-intersecting — it is empirically FALSE for a_1=135/105/385 (e.g. {2,5}∩{3,7}=∅); only holds for small-|M'_∞| cases where it's trivially forced. (round 3, corrects a shadow-sequence-explorer overclaim)
+- ALWAYS: when a builder self-claims SOLVED, treat as CHANGES REQUESTED until an independent reviewer (and ideally an independent computational spot-check of the FOUNDATION, e.g. the characterization) confirms. Orchestrator independently verified G=H (0 mismatches, 7 a_1) before declaring solved. (round 3)
+- REMOVED: the round-2 conjecture (C) / (W) framing of B1' as the "cleanest next-round target" — SUPERCEDED by the w-descent-rsmooth solve via the stronger similarity theorem with threshold a_1. (W)⟹(C)⟹B1' is recorded as a corollary but unneeded; the similarity theorem is the actual crux-closer. (round 3)
+
+## State
+
+Done:
+- Round 1: full flow. 5 approaches seeded & registered. 3 built & reviewed. Certified machinery: bounded-difference, universal-small-prime, cyclic-successor-on-periodic-set (Theorem 1), trivial cases (even / prime-power). Problem reduced to B1 (crux) + B2 (secondary). Both bypasses ruled out.
+- Round 2: full flow. 3 explorers → outliner (2 new slugs) → outline-reviewer (ranked all 7, registered 2, retired 2, excluded coupled periodic-set-iteration) → 4 builders → 1 reviewer.
+  **CONDITIONAL SPINE CERTIFIED:** B1' ⟹ a_{n+T}=a_n+L for n≥N (seed automatic, L=kernel product, stabilization free via pigeonhole over finite P_R). 7 new lemmas certified (cross-intersecting-closure, spacing-fact, value-bound-unkillable-window, small-prime-minimum-in-window, sigma-periodicity-conditional, vp-union-bound-PARTIAL, small-prime-inclusion).
+  B1' pinpointed as the single crux, cleanly reformulated (no large-prime shortcut in (a_n,a_n+R]; = M_n=M'_n sufficiency).
+  3 of 4 attack mechanisms (spacing/v_p/covering) shown COUPLED + clean value-window REFUTED. Transversal-duality (hitting-set) genuinely INDEPENDENT but not closing (greedy-specific lever needed). frozen-invariant RETIRED (aimo-0678 lever doesn't transfer). compactness-konig + bijection-from-n1 RETIRED.
+  New conjecture (C): A_n∩(a_n,a_n+R]⊆B_n (0 violations, 480+ pairs) — cleanest next-round B1' target, strictly stronger than B1'.
+
+  **(round 3 — SOLVED)** w-descent-rsmooth built the complete proof (characterization G=H + s-substitution patched + similarity descent + CRT periodicity + Theorem 1). B1' AND B2 closed directly. proof-reviewer APPROVE (verified-milestone). Independently re-verified G=H + similarity + from-n=1. b2-induction-step built B2-given-B1' via CRT-density escape (moot). Corrected sigma-periodicity T' bug. Retired hitting-set-monovariant. Cut cross-intersecting-anchor (false crux).
+Broken:
+- (none — the problem is SOLVED. All gaps B1', B2 closed by w-descent-rsmooth's similarity theorem + CRT + Theorem 1.)
+
+Next:
+- (none — goal achieved. If the run continues, promote w-descent-rsmooth's lemmas (greedy-set characterization, s-substitution, similarity theorem) to certified `lemmas/` files for the corpus, and consider whether the minimal period (vs the non-minimal P=∏primes≤a_1) admits a clean formula.)

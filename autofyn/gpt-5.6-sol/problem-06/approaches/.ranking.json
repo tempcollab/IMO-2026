@@ -1,0 +1,14 @@
+{
+  "finite-support-maximal-linked": {
+    "copied_from": null,
+    "elo": 1500.0,
+    "expanded": 2,
+    "last_note": "Closed the finite-control gap via a verified marked-prime strict radical descent; all terminal cases and the final global indexing argument check out.",
+    "last_outcome": "verified-milestone",
+    "last_round": 2,
+    "selected": 4,
+    "slug": "finite-support-maximal-linked",
+    "stale": true,
+    "summary": "Encode the sequence as a self-dual maximal linked upfamily of finite prime supports, prove finite support, then enumerate its CRT-periodic gcd-polar."
+  }
+}

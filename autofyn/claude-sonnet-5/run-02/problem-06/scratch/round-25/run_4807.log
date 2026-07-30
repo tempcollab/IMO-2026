@@ -1,0 +1,9 @@
+[4807] n=25000 a_n=441100 distinct_types=132 elapsed=0.6s
+[4807] n=50000 a_n=877458 distinct_types=150 elapsed=1.4s
+[4807] n=100000 a_n=1750122 distinct_types=165 elapsed=3.9s
+[4807] n=200000 a_n=3495506 distinct_types=181 elapsed=13.4s
+[4807] n=300000 a_n=5240928 distinct_types=192 elapsed=28.2s
+[4807] n=400000 a_n=6986338 distinct_types=200 elapsed=78.8s
+[4807] n=500000 a_n=8731720 distinct_types=208 elapsed=124.3s
+[4807] n=750000 a_n=13095126 distinct_types=216 elapsed=290.9s
+[4807] n=1000000 a_n=17458650 distinct_types=220 elapsed=498.1s

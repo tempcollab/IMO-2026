@@ -1,0 +1,25 @@
+vector-perpendicular-bisector — APPROVE
+- This is a whole end-to-end attempt and now has a concrete closing mechanism. The oriented coordinates correctly absorb the first angle equality, while the ordinary-angle branch and positivity data are retained.
+- Steps 4–5 must be printed, not merely quoted: for each angle equality use the cross-multiplied sine/cosine relation, expand it, and show explicitly that the residual is respectively a nonzero factor times F2 or F3. The proposed formulas pass symbolic sanity checking, including the signs and factors.
+- Step 7 is a legitimate explicit certificate rather than an ideal-membership promise. Direct numerical expansion at generic parameter values supports the identity, but the builder must provide the requested coefficient grouping using h=sin(A+x), angle addition, and the Pythagorean identities. A CAS assertion is not a proof.
+- State why 0<x<B follows from K lying inside angle LBA together with the ray order, and why reflection preserves all ordinary angle hypotheses. Do not divide by dot products, so right-angle cases remain covered.
+- The certified circumcentre-linear-certificate lemma closes the argument once T=0, so no terminal logical gap remains in the skeleton.
+
+four-circle-midpoint-web — CHANGES REQUESTED
+- This is a genuinely different, whole synthetic route, and steps 1–4 are substantive: directed-angle concyclicity gives (BCDE), (BDLN), and (CEKM), while Power of a Point at A and AM=AB/2, AN=AC/2 give (DEMN). The endpoint in steps 6–7 is also correct if the midpoint-web lemma holds.
+- Step 5 is the entire hard burden and is still only a conjectural instruction. “Compose the spiral similarities” is not yet a mechanism detailed enough to build blindly. The builder must identify the actual direct similarities (source pair, image pair, centre, and scale), show how the factor-2 dilations produce P=mid(B,E) and Q=mid(C,D), and then prove both P and Q lie on (AKL). If that explicit map cannot be found, retain the approach as partial rather than asserting (W).
+- Correct the wording in step 6: after (W), P and Q are the second intersections of AB and AC with omega because their definitions as midpoints place them on those lines; then explicitly compute AP=(AB+AE)/2 and MP=AE/2 in directed lengths (and analogously NQ=AD/2). This supplies the displayed quarter-products and controls signs.
+- Treat coincidences or points at infinity directly; a limiting argument must itself be justified. The approach is registered because the four-circle reduction and precise midpoint target materially improve the rejected mechanism-free synthetic sketches.
+
+trig-circle-factorization — CHANGES REQUESTED
+- The revised ray-order angles and decoupled residuals repair the fatal round-1 error. The outline is a whole route, and the cotangent substitution is branch-safe because it divides only by sin^2 p and sin^2 q.
+- Step 3 must derive all four Sine Law formulas triangle by triangle and verify every denominator from 0<p<B-x and 0<q<C-x. Step 5 must likewise prove the denominators sin C Q-cos C and sin B P-cos B are nonzero before clearing them.
+- Step 7 remains an unprinted ideal-membership certificate. Polynomial division guarantees only a remainder of bidegree at most (1,1), not that its four coefficients vanish. The builder may not claim completion unless it prints U,V or the quotient and all four coefficient cancellations. Numerical sanity checking on both roots of each sample quadratic supports the proposed divisibility, but is not a certificate.
+- This route is viable but ranks below the vector route: it rebuilds more angle bookkeeping and reaches a substantially larger algebraic certificate, while the vector route already has a compact explicit identity. It also shares the analytic circle-equation endpoint, so building both analytic routes this round would provide limited diversity.
+
+Field ranking and diversity
+- Ranking evidence: vector-perpendicular-bisector has closed its former open elimination gap with a compact explicit certificate, so it beats both rivals. The corrected trig route beats the new synthetic route in proximity to a full proof, but the synthetic route is valuable as the only framing not dependent on analytic circle equations.
+- Updated full-field order: vector-perpendicular-bisector (1517.40), trig-circle-factorization (1513.86), four-circle-midpoint-web (1468.73). Both stale round-1 outcomes were anchored in the comparisons. No copy was requested or justified; the synthetic slug is a new whole attempt rather than a twin of either old mechanism-free note.
+- Build the strongest near-complete route and the only genuinely diverse synthetic route. Defer the corrected trig route this round because its central certificate is larger and overlaps the vector framing.
+
+build set: vector-perpendicular-bisector, four-circle-midpoint-web

@@ -1,0 +1,9 @@
+float pass: 10429650 4-tuples, 839787 feasible, 6008 candidates, 136.0s
+=== n=4 EXACT verification ===
+candidates verified: 6008, exact feasible: 6008
+distinct multisets (exact): 12
+min A (exact, integer scale): 1  (real: 1/31)
+target: 1 (real: 1/31)
+EXACT VIOLATIONS (A<1): 0
+min config: ks=(0, 0, 0, 0, 4), multiset=(Fraction(8, 1), Fraction(8, 1), Fraction(4, 1), Fraction(4, 1), Fraction(2, 1), Fraction(2, 1), Fraction(1, 1), Fraction(1, 1), Fraction(1, 1))
+verify time: 0.7s

@@ -1,0 +1,1 @@
+ALWAYS: Recompute every claimed triangle angle directly from the ray table before trusting a “corrected” sine-law denominator (a builder reversed the correction and introduced a false common angle, round 1).

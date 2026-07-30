@@ -1,0 +1,110 @@
+{
+  "b2-induction-step": {
+    "copied_from": null,
+    "elo": 1541.5674826256716,
+    "expanded": 1,
+    "last_note": "Path-\u03b2 CRT-density escape is SOUND (infinite AP, exact CRT density, no re-coupling to refuted Cov/v_p wall). Seed a_1\u2208B certified. But imports sigma-periodicity lemma with BUGGY T' formula (verified a_1=35,p=17: period 578\u2260lcm(34,17)=34); corrected T'=T\u00b7\u220f{p\u2264R,p\u2224L} restores path \u03b2. B1' (open crux) remains. B2-given-B1' essentially closed with the corrected lemma.",
+    "last_outcome": "advanced",
+    "last_round": 3,
+    "selected": 0,
+    "slug": "b2-induction-step",
+    "stale": true,
+    "summary": "B2-dedicated: seed a_1\u2208B is a theorem given B1' (universal-small-prime); B2 reduces to a single induction step against prematurely-valid SMALL-prime B_n\\B candidates, attacked via path \u03b2 (future-shared primes small, \u03c3-periodicity) + path \u03b3 (2\u2208S for odd a_1)."
+  },
+  "bijection-from-n1": {
+    "copied_from": null,
+    "elo": 1390.2717027655285,
+    "expanded": 1,
+    "last_note": "Proved shared bounded-diff + Theorem 1 + trivial cases (even, prime power) + common-prime-lock; distinctive injectivity bypass of B1 COLLAPSED (transition not well-defined without B1) \u2014 route not genuinely distinct; B1+B2 open.",
+    "last_outcome": "partial",
+    "last_round": 1,
+    "selected": 4,
+    "slug": "bijection-from-n1",
+    "stale": false,
+    "summary": "Prove the transition T on the reachable residue set is injective \u21d2 bijection \u21d2 single permutation cycle \u21d2 from-n=1 periodicity is free (the injectivity route, distinctive crux is a direct injectivity argument avoiding a clean kernel bound)."
+  },
+  "bounded-diff-finite-state": {
+    "copied_from": null,
+    "elo": 1615.956546216597,
+    "expanded": 2,
+    "last_note": "Corrected modulus to kernel product; \u03c3-periodicity lemma + v_p union-bound PARTIAL result (B1' for n\u2264n0~10^2000) certified; conjecture (C) (0 violations) recorded as strongest clean next-round target. Beyond n0 the sieve-error obstruction is structural and coupled to spacing wall. Lemma 6 pre-stabilization scope gap flagged.",
+    "last_outcome": "advanced",
+    "last_round": 2,
+    "selected": 4,
+    "slug": "bounded-diff-finite-state",
+    "stale": false,
+    "summary": "Bounded diffs \u2264 rad(a_1) \u21d2 finite active-prime kernel S \u21d2 pigeonhole eventual periodicity mod L \u21d2 lift to equality \u21d2 injectivity for from-n=1 (the outer-automaton route, crosses B1 via competing-candidate bound)."
+  },
+  "compactness-konig-branch": {
+    "copied_from": null,
+    "elo": 1341.0758016985512,
+    "expanded": 0,
+    "last_note": null,
+    "last_outcome": null,
+    "last_round": null,
+    "selected": 4,
+    "slug": "compactness-konig-branch",
+    "stale": false,
+    "summary": "K\u00f6nig's lemma on the tree of consistent residue-histories; local rad(a_1) bound for finite branching (aims to avoid B1); uniqueness of the greedy path \u21d2 from-n=1 (the non-constructive route, highest-variance gamble)."
+  },
+  "frozen-invariant-reduce-mod-lcm": {
+    "copied_from": null,
+    "elo": 1430.4361033799014,
+    "expanded": 1,
+    "last_note": "Route retired: load-bearing monovariant w_n=min{m>a_n:m\u2209B_n} is non-decreasing (opposite of required), gap oscillates; aimo-0678 shape needs frozen invariant + gcd/lcm recurrence, neither in our single-sequence greedy. Step 4 finite-state is conditional on B1' (re-derives Theorem 1). Do not retry monovariant shape.",
+    "last_outcome": "dead-end",
+    "last_round": 2,
+    "selected": 3,
+    "slug": "frozen-invariant-reduce-mod-lcm",
+    "stale": false,
+    "summary": "Adapt the aimo-0678 crux: bounded coordinate d_n\u2264R (free); find a frozen invariant / simplifying regime; construct a min-of-failing-set integer monovariant w_n=min{m>a_n: m not small-prime-admissible}, prove non-increasing \u21d2 B1'; then reduce mod lcm of attainable state-values \u21d2 finite-state pair \u21d2 eventually periodic. Genuinely different proof shape (does not route through M'_n stabilization + Theorem 1 as spine). Highest risk; may not transfer \u2014 retire if step 3 fails."
+  },
+  "hitting-set-monovariant": {
+    "copied_from": null,
+    "elo": 1525.8042344879034,
+    "expanded": 1,
+    "last_note": "Dropped false round-1 monovariant; cross-intersecting closure lemma certified (unconditional, 0/1581); transversal-duality descent breaks at one-prime swap, Hall/K\u00f6nig inapplicable to hypergraph transversals, universal-small-prime necessary-but-not-sufficient (1515/5000). Genuinely independent mechanism but does not close B1'.",
+    "last_outcome": "partial",
+    "last_round": 2,
+    "selected": 4,
+    "slug": "hitting-set-monovariant",
+    "stale": false,
+    "summary": "Minimal-hitting-set family M_n stabilizes via a well-founded monovariant; cross-intersecting closure is self-sustaining; once M stable, greedy walks a fixed finite union of APs mod L (the combinatorial-kernel route, crosses B1 via explicit measure)."
+  },
+  "periodic-set-iteration": {
+    "copied_from": null,
+    "elo": 1548.6875477224282,
+    "expanded": 1,
+    "last_note": "Proved+certified Theorem 1 (canonical cyclic-successor) and clean reduction A_n chain; profinite-compactness bypass correctly ruled out; B1 + free-rider-shortcuts sub-gap + from-n=1 remain open.",
+    "last_outcome": "advanced",
+    "last_round": 1,
+    "selected": 4,
+    "slug": "periodic-set-iteration",
+    "stale": false,
+    "summary": "Factor into an abstract \"iterating least-greater-than on a periodic set is a single cycle from the start\" theorem + convergence of the admissible sets A_n to a fixed periodic set (possibly via profinite compactness escape from B1)."
+  },
+  "small-prime-window-lemma": {
+    "copied_from": null,
+    "elo": 1557.9782149771384,
+    "expanded": 1,
+    "last_note": "Clean reduction of crux to single claim B1'; spacing fact + value-bound necessary-condition lemma + conditional spine (B1'\u27f9periodicity from N, seed automatic) all certified; but (Cov) covering sufficiency is the unproved heart and the clean value-window version is empirically refuted (9927 violations at a1=15). Coupled to the spacing/v_p wall.",
+    "last_outcome": "partial",
+    "last_round": 2,
+    "selected": 3,
+    "slug": "small-prime-window-lemma",
+    "stale": false,
+    "summary": "Reframe B1 as a single window-admissibility lemma (no large-prime shortcut in (a_n,a_n+R]) and attack it via the spacing fact (q>R divides \u22641 window integer) + a last-period covering bound on the small-missed support class; once B1' holds the rest is free (pigeonhole stabilization of M'_n over P_R, then Theorem 1). Cleanest single-claim reframing."
+  },
+  "w-descent-rsmooth": {
+    "copied_from": null,
+    "elo": 1548.2223661262803,
+    "expanded": 2,
+    "last_note": "SOLVED. Patch closed Lemma 2 gap (Case 1: k-smooth\u27f9x=b; Case 2: big-prime strip+inflate). Cor 1.2 (a\u27f6r move) is NON-CIRCULAR (proved from Lemma 1 = greedy definition alone, no similarity/periodicity). Descent's strict decrease r<a comes from Cor 1.2, not Lemma 2. Purely-smooth regime (a_1\u2208{175,221,385}) handled by direct contradiction (r'=r, no minimality). Verified: Lemma 1 0 mismatches, similarity 0 violations, Lemma 2 0 failures, G P-periodic 0 failures, from-n=1 confirmed. IMO 2026 P6 SOLVED.",
+    "last_outcome": "verified-milestone",
+    "last_round": 3,
+    "selected": 0,
+    "slug": "w-descent-rsmooth",
+    "stale": true,
+    "summary": "Prove (W) \"every small-support class has an R-smooth term\" by minimal-counterexample s-substitution descent (strip large primes) + late-arrival induction; clean reduction (W)\u27f9(C)\u27f9B1' + certified spine; B2 deferred."
+  }
+}

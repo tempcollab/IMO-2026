@@ -1,0 +1,74 @@
+{
+  "backward-induction-transcendence": {
+    "copied_from": null,
+    "elo": 1499.8985139716713,
+    "expanded": 0,
+    "last_note": null,
+    "last_outcome": null,
+    "last_round": null,
+    "selected": 0,
+    "slug": "backward-induction-transcendence",
+    "stale": false,
+    "summary": "Necessity via backward induction on Mulan's winning strategy tree + transcendence-degree field tower; re-derives the four primitive families mechanically from the cut formula's affine structure (avoiding the hand-list-omission bug) but its core WLOG-x1-in-K_i lemma is only a proof sketch and its closure step imports corrected-genericity-bound's still-unproven C*(theta) closed form."
+  },
+  "binary-word-invariant": {
+    "copied_from": null,
+    "elo": 1487.6754671071635,
+    "expanded": 1,
+    "last_note": "Found the shift move; reviewer independently hand/computer-verified the full 8-move \u03b8=180/7 witness and the general n\u22652 construction move-by-move \u2014 genuine, not a search artifact. Necessity S\u2286{180/n} still an honestly-stated open gap.",
+    "last_outcome": "advanced",
+    "last_round": 2,
+    "selected": 0,
+    "slug": "binary-word-invariant",
+    "stale": false,
+    "summary": "Reformulates the game as a monoid orbit of \u03b8/180 under {x/2, 180-x}, abstracting away the spectator angle; orbit reproduces dyadic-scaffold's family exactly (sanity-checked), and the discriminating test is whether 180/7 needs a third generator; hardest step (orbit-non-membership \u27f9 unforceable) flagged as high-risk."
+  },
+  "corrected-genericity-bound": {
+    "copied_from": null,
+    "elo": 1572.7742187621295,
+    "expanded": 1,
+    "last_note": "Claimed solved (S=F, 180/7 not forceable) but refuted: closure C(V) in \u00a73 omits the shift operation a\u21a6a-\u03b8, so the necessity theorem is false \u2014 reviewer reproduced the 180/7 witness exactly, contradicting this approach's headline claim. Sub-lemmas (double-hit dichotomy, junk propagation) certified separately.",
+    "last_outcome": "dead-end",
+    "last_round": 2,
+    "selected": 0,
+    "slug": "corrected-genericity-bound",
+    "stale": false,
+    "summary": "Necessity-side audit: proves the prior double-hit-only genericity argument (S={90/2^k}) is refuted by the transfer lemma's single-hit forced transitions; attempts a repaired genericity bound or a denominator/2-adic invariant to bound S above beyond \u03b8>90, importing dyadic-scaffold's construction to complete the claim if successful."
+  },
+  "denominator-valuation-necessity": {
+    "copied_from": null,
+    "elo": 1504.1025094179636,
+    "expanded": 1,
+    "last_note": "Cleanliness Lemma independently re-derived and computer-verified (targeted exact-Fraction search, 0/17500 counterexamples for non-integer T vs tens of thousands when T forced integer); necessity theorem's induction and case coverage airtight; combined with certified sufficiency lemma gives full solve S={180/n : n>=2}.",
+    "last_outcome": "verified-milestone",
+    "last_round": 5,
+    "selected": 0,
+    "slug": "denominator-valuation-necessity",
+    "stale": true,
+    "summary": "Necessity via elementary 2-adic/denominator bookkeeping on a concrete rational Shan-Yu start, no transcendence machinery; irrational-theta sub-case nearly closes (modulo a small residual wild-x1 gap), rational-theta sub-case rests entirely on an unproved odd-part-of-denominator invariant flagged as open conjecture."
+  },
+  "dyadic-scaffold": {
+    "copied_from": null,
+    "elo": 1493.863511178737,
+    "expanded": 1,
+    "last_note": "Correct, gap-free floor (\u03b8>90 impossible; dyadic family {180/((2^k+1)2^j)}\u2286S), verified by reviewer; superseded (not wrong) by binary-word-invariant's larger family; exact upper bound on S still open.",
+    "last_outcome": "partial",
+    "last_round": 2,
+    "selected": 0,
+    "slug": "dyadic-scaffold",
+    "stale": false,
+    "summary": "Direct cevian-cut algebra (identity \u2605): proves \u03b8>90 impossible (non-obtuse invariant) and \u03b8=180/((2^k+1)2^j) forceable for all k,j\u22650 via bisection+transfer lemmas; safe verified partial baseline, exact upper characterization open."
+  },
+  "full-interval-hypothesis": {
+    "copied_from": null,
+    "elo": 1441.685779562335,
+    "expanded": 1,
+    "last_note": "Its restricted \"pure-quantity\" move monoid (bisection + cross-transfer) omits the shift move; the mod-7 obstruction it proves only holds inside that restricted family. Its headline suspicion (\"180/7 witness is a search artifact\") is refuted by binary-word-invariant's verified construction. Self-reported unsolved was appropriately hedged.",
+    "last_outcome": "dead-end",
+    "last_round": 2,
+    "selected": 0,
+    "slug": "full-interval-hypothesis",
+    "stale": false,
+    "summary": "Attempts to prove S=(0,90] exactly via a nested/adaptive extension of the transfer-lemma recursion beyond the fixed {r,\u03b8-r,180-\u03b8} escape cycle; gated on hand-verifying the computational 180/7 witness first; must separately address irrational \u03b8."
+  }
+}

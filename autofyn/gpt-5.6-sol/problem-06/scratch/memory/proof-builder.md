@@ -1,0 +1,2 @@
+NEVER: Infer the positive half of finite control merely from one chosen positive witness for each negative trace on a finite anchor (because those witnesses certify negative traces but need not hit every positive set, round 1).
+ALWAYS: When periodicity is obtained for a static integer set, prove the order-preserving translation bijection on the half-line from the initial term and count the first half-open block (because this removes the eventual-to-global index-boundary gap, round 1).

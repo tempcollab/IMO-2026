@@ -1,0 +1,10 @@
+{
+  "pr_title": "Solve IMO 2026 P4 (Mulan triangle game): characterize θ for which Mulan forces a θ-angle — answer θ=180°/n (n≥2 integer)",
+  "rounds": [
+    {
+      "n": 1,
+      "summary": "Solved imo-2026-04: Mulan wins iff θ=180°/n (n≥2); 3 APPROVE'd proofs + certified lemmas, sim-verified.",
+      "ended_at": "2026-07-28T02:01:46Z"
+    }
+  ]
+}

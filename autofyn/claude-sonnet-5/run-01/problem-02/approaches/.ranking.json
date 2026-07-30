@@ -1,0 +1,38 @@
+{
+  "coordinate-groebner-elimination": {
+    "copied_from": null,
+    "elo": 1528.1883778881227,
+    "expanded": 3,
+    "last_note": "Correctly self-reported partial: closed vertex-B/C halves of branch-selection via its own Ray-Betweenness Lemma but left vertex-N/M halves open, unlike the sibling which closed all four this round; problem now solved via that sibling.",
+    "last_outcome": "partial",
+    "last_round": 5,
+    "selected": 1,
+    "slug": "coordinate-groebner-elimination",
+    "stale": true,
+    "summary": "Full coordinate parametrization of K,L; encode hypotheses as polynomials e1,e2 and target as myexpr; show myexpr in ideal(e1,e2) via explicit cofactors/resultants. Naturally handles AB=AC with no special case."
+  },
+  "inversion-at-a-collinearity": {
+    "copied_from": null,
+    "elo": 1418.0678716829452,
+    "expanded": 3,
+    "last_note": "Found new cross-ratio mechanism (Lemma 4) translating (ii),(iii) into concyclicity statements without inversion, resolving the round-4 \"invisible\" diagnosis, but the resulting 3-concyclic-quadruple system is not chased to a closed loop; genuine independent progress, problem solved overall via sibling.",
+    "last_outcome": "partial",
+    "last_round": 5,
+    "selected": 1,
+    "slug": "inversion-at-a-collinearity",
+    "stale": true,
+    "summary": "Invert at A to convert A,K,L,A* concyclicity into collinearity of K*,L*, and fixed point A*'=inv_A(A*); closes via translated hypotheses + Menelaus-type argument."
+  },
+  "synthetic-angle-chase-aklastar": {
+    "copied_from": null,
+    "elo": 1553.7437504289321,
+    "expanded": 3,
+    "last_note": "Closed the directed-angle branch-selection gap (new ray-betweenness sign lemma + reuse of interior-point-side-test on new edges at N,M) in closed form; reviewer independently re-verified every step from scratch (Lemma A numerically stress-tested 200k trials, cofactor identity re-derived symbolically, 340 diverse valid configs end-to-end all consistent) \u2014 problem SOLVED.",
+    "last_outcome": "verified-milestone",
+    "last_round": 5,
+    "selected": 1,
+    "slug": "synthetic-angle-chase-aklastar",
+    "stale": true,
+    "summary": "Directed-angle chase proving A,K,L,A* concyclic (A*=rectangle fixed point) directly from the three hypotheses plus isosceles triangles ABM, ACN; symmetry fallback for AB=AC."
+  }
+}

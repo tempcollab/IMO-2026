@@ -1,0 +1,38 @@
+{
+  "four-circle-midpoint-web": {
+    "copied_from": null,
+    "elo": 1468.7333259407055,
+    "expanded": 1,
+    "last_note": "Complete proof verified: tangent coincidence branches and radical-axis midpoint-web certificate close all cases.",
+    "last_outcome": "verified-milestone",
+    "last_round": 2,
+    "selected": 0,
+    "slug": "four-circle-midpoint-web",
+    "stale": true,
+    "summary": "Four explicit cyclic quadrilaterals reduce equal circumcentre distances to a midpoint second-intersection theorem and equal powers."
+  },
+  "trig-circle-factorization": {
+    "copied_from": null,
+    "elo": 1513.8648451730774,
+    "expanded": 1,
+    "last_note": "Circle determinant reduction is valid, but the claimed common angle A+2x+y+z and both sine-law denominators are wrong; the elimination gap remains.",
+    "last_outcome": "partial",
+    "last_round": 1,
+    "selected": 4,
+    "slug": "trig-circle-factorization",
+    "stale": false,
+    "summary": "Sine-law parametrization reduces the geometry to two scalar incidence equations, then proves equal circle powers by explicit factorization."
+  },
+  "vector-perpendicular-bisector": {
+    "copied_from": null,
+    "elo": 1517.4018288862171,
+    "expanded": 2,
+    "last_note": "Complete proof verified: both angle residual expansions and the load-bearing coefficient certificate independently reproduce exactly.",
+    "last_outcome": "verified-milestone",
+    "last_round": 2,
+    "selected": 4,
+    "slug": "vector-perpendicular-bisector",
+    "stale": true,
+    "summary": "Vector circle equations reduce the target to one linear identity to be certified from oriented dot-cross angle relations."
+  }
+}

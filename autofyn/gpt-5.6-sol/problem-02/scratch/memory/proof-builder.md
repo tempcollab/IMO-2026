@@ -1,0 +1,1 @@
+ALWAYS: Independently verify every outlined angle denominator before attempting its requested factorization (because the two advertised decoupled sine-law residuals omitted one angle each and were false, round 1)

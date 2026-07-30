@@ -1,0 +1,91 @@
+========================================================================
+FULL EXHAUSTIVE PL-VERTEX ENUMERATION of <=3-mark refinements of T_3
+========================================================================
+Towers: [Fraction(8, 1), Fraction(4, 1), Fraction(2, 1), Fraction(1, 1)], total D_3 = 15
+
+Matrix-enumeration stats (4 x d count matrices, total N, margins >= 1):
+  N   d  #matrices  #unique-soln
+  4   1          1             0
+  4   2         14             0
+  4   3         36             0
+  4   4         24            24
+  5   1          4             0
+  5   2         88             0
+  5   3        372            18
+  5   4        528           384
+  6   1         10             0
+  6   2        324             2
+  6   3       2022           120
+  6   4       4648          3120
+  7   1         20             0
+  7   2        912             0
+  7   3       7896           426
+  7   4      26224         17472
+    tot      43123         21566
+
+Distinct PL-vertex multisets M recorded: 120
+  with D < 1 : 0
+  with D = 1 : 5
+  with D > 1 : 115
+  min D over all vertices: 1
+  max D over all vertices: 8
+
+--- D value distribution ---
+  D = 1 : 5 vertices
+  D = 5/3 : 3 vertices
+  D = 2 : 11 vertices
+  D = 7/3 : 5 vertices
+  D = 5/2 : 1 vertices
+  D = 3 : 20 vertices
+  D = 10/3 : 1 vertices
+  D = 11/3 : 3 vertices
+  D = 4 : 7 vertices
+  D = 13/3 : 4 vertices
+  D = 9/2 : 1 vertices
+  D = 14/3 : 1 vertices
+  D = 5 : 18 vertices
+  D = 17/3 : 7 vertices
+  D = 6 : 14 vertices
+  D = 19/3 : 4 vertices
+  D = 13/2 : 1 vertices
+  D = 7 : 8 vertices
+  D = 22/3 : 1 vertices
+  D = 23/3 : 3 vertices
+  D = 8 : 2 vertices
+
+--- Vertices attaining the minimum D ---
+  N=6 d=3 D=1 M=[Fraction(4, 1), Fraction(4, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(1, 1)] v=[Fraction(1, 1), Fraction(2, 1), Fraction(4, 1)] g=[2, 2, 1, 1] split_towers=[0, 1] F_mass=12 T_mass=3
+  N=6 d=4 D=1 M=[Fraction(4, 1), Fraction(4, 1), Fraction(3, 1), Fraction(2, 1), Fraction(1, 1), Fraction(1, 1)] v=[Fraction(2, 1), Fraction(3, 1), Fraction(1, 1), Fraction(4, 1)] g=[2, 2, 1, 1] split_towers=[0, 1] F_mass=13 T_mass=2
+  N=6 d=4 D=1 M=[Fraction(5, 1), Fraction(4, 1), Fraction(2, 1), Fraction(2, 1), Fraction(1, 1), Fraction(1, 1)] v=[Fraction(4, 1), Fraction(5, 1), Fraction(1, 1), Fraction(2, 1)] g=[3, 1, 1, 1] split_towers=[0] F_mass=11 T_mass=4
+  N=7 d=3 D=1 M=[Fraction(4, 1), Fraction(4, 1), Fraction(2, 1), Fraction(2, 1), Fraction(1, 1), Fraction(1, 1), Fraction(1, 1)] v=[Fraction(1, 1), Fraction(2, 1), Fraction(4, 1)] g=[2, 2, 2, 1] split_towers=[0, 1, 2] F_mass=14 T_mass=1
+  N=7 d=3 D=1 M=[Fraction(3, 1), Fraction(3, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(1, 1)] v=[Fraction(1, 1), Fraction(2, 1), Fraction(3, 1)] g=[3, 2, 1, 1] split_towers=[0, 1] F_mass=12 T_mass=3
+
+--- COUNTEREXAMPLES (D < 1) ---
+  NONE. min D = 1 >= 1. Lower bound D*(T_3) >= 1 VERIFIED at every PL vertex.
+
+--- Mark-distribution (split_towers) breakdown ---
+  split_towers=() (0 tower(s) split): 1 vertices, min D=5
+  split_towers=(0,) (1 tower(s) split): 11 vertices, min D=1
+  split_towers=(0, 1) (2 tower(s) split): 30 vertices, min D=1
+  split_towers=(0, 1, 2) (3 tower(s) split): 6 vertices, min D=1
+  split_towers=(0, 1, 3) (3 tower(s) split): 7 vertices, min D=2
+  split_towers=(0, 2) (2 tower(s) split): 8 vertices, min D=7/3
+  split_towers=(0, 2, 3) (3 tower(s) split): 6 vertices, min D=3
+  split_towers=(0, 3) (2 tower(s) split): 11 vertices, min D=2
+  split_towers=(1,) (1 tower(s) split): 4 vertices, min D=6
+  split_towers=(1, 2) (2 tower(s) split): 10 vertices, min D=5
+  split_towers=(1, 2, 3) (3 tower(s) split): 6 vertices, min D=5
+  split_towers=(1, 3) (2 tower(s) split): 7 vertices, min D=6
+  split_towers=(2,) (1 tower(s) split): 2 vertices, min D=13/3
+  split_towers=(2, 3) (2 tower(s) split): 8 vertices, min D=4
+  split_towers=(3,) (1 tower(s) split): 3 vertices, min D=17/3
+
+--- Equality witness (D=1) ---
+  M=[Fraction(4, 1), Fraction(4, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(1, 1)] N=6 d=3 (dyadic: all values powers of 2) all_pow2=True
+  M=[Fraction(4, 1), Fraction(4, 1), Fraction(3, 1), Fraction(2, 1), Fraction(1, 1), Fraction(1, 1)] N=6 d=4 (dyadic: all values powers of 2) all_pow2=False
+  M=[Fraction(5, 1), Fraction(4, 1), Fraction(2, 1), Fraction(2, 1), Fraction(1, 1), Fraction(1, 1)] N=6 d=4 (dyadic: all values powers of 2) all_pow2=False
+  M=[Fraction(4, 1), Fraction(4, 1), Fraction(2, 1), Fraction(2, 1), Fraction(1, 1), Fraction(1, 1), Fraction(1, 1)] N=7 d=3 (dyadic: all values powers of 2) all_pow2=True
+  M=[Fraction(3, 1), Fraction(3, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(1, 1)] N=7 d=3 (dyadic: all values powers of 2) all_pow2=False
+
+Dyadic balanced-pairs config [Fraction(4, 1), Fraction(4, 1), Fraction(2, 1), Fraction(2, 1), Fraction(1, 1), Fraction(1, 1), Fraction(1, 1)] present: True
+  its D = 1 (expect 1)

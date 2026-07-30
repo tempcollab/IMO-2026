@@ -1,0 +1,85 @@
+{
+  "pr_title": "IMO 2026 P3: c(n)=2^n/(2^{n+1}−1) — UB proven; LB b-lift reduced to endpoint slice, 2 leaves left",
+  "rounds": [
+    {
+      "n": 1,
+      "summary": "Answer c(n)=2^n/(2^{n+1}-1) found; 3 approaches partial",
+      "ended_at": "2026-07-28T14:06:06Z"
+    },
+    {
+      "n": 2,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T14:39:21Z"
+    },
+    {
+      "n": 3,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T14:54:42Z"
+    },
+    {
+      "n": 4,
+      "summary": "Both walls narrowed to last sub-case; 2 lemmas certified",
+      "ended_at": "2026-07-28T15:39:49Z"
+    },
+    {
+      "n": 6,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T18:52:40Z"
+    },
+    {
+      "n": 7,
+      "summary": "Upper bound c(n)=2^n/(2^{n+1}-1) proven & certified ∀n",
+      "ended_at": "2026-07-28T20:12:16Z"
+    },
+    {
+      "n": 8,
+      "summary": "GAP-L: 3 framings proven equivalent to target; 3 lemmas certified",
+      "ended_at": "2026-07-28T20:39:59Z"
+    },
+    {
+      "n": 9,
+      "summary": "GAP-L reduced to 2 cruxes; +1 injector certified",
+      "ended_at": "2026-07-28T21:23:05Z"
+    },
+    {
+      "n": 10,
+      "summary": "GAP-L collapsed to scalar I_n≤0; integrality route pruned",
+      "ended_at": "2026-07-28T21:58:23Z"
+    },
+    {
+      "n": 11,
+      "summary": "GAP L pinned to (★); ladder-identity certified; b-pruning dead",
+      "ended_at": "2026-07-28T22:31:09Z"
+    },
+    {
+      "n": 12,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T23:07:12Z"
+    },
+    {
+      "n": 13,
+      "summary": "(★) base slice PROVEN+certified; GAP L→b-lift only",
+      "ended_at": "2026-07-29T01:59:01Z"
+    },
+    {
+      "n": 14,
+      "summary": "b-lift twins RETHINK; wall=overlap term; +1 lemma",
+      "ended_at": "2026-07-29T02:31:52Z"
+    },
+    {
+      "n": 15,
+      "summary": "b-lift pinned to cut-top-rung leaf; budget now live",
+      "ended_at": "2026-07-29T03:13:17Z"
+    },
+    {
+      "n": 16,
+      "summary": "b-lift leaf ΣR≤θ half CLOSED; budget-trade proven",
+      "ended_at": "2026-07-29T03:45:09Z"
+    },
+    {
+      "n": 17,
+      "summary": "b-lift collapsed to endpoint slice ΣR=2^m; 2 leaves open",
+      "ended_at": "2026-07-29T04:27:41Z"
+    }
+  ]
+}

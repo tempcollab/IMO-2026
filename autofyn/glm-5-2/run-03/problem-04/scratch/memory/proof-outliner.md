@@ -1,0 +1,6 @@
+# proof-outliner role memory
+
+## Round 1 (imo-2026-04, Mulan triangle game)
+ALWAYS: when three independent explorers converge on the same conjectured answer and the same crux move, still open ≥3 genuinely-different-framing rival approaches — the convergence is on the answer, not on the route, and the route diversity is where the rigor gaps surface. (Round 1: all three explorers agreed θ=180/n, but their inclusion mechanisms — lattice-alignment, needle-Euclidean, residue-monovariant — are genuinely different and have different crux gaps.)
+NEVER: assume "a shared structural fact" (here: the two P-angles are supplementary) automatically makes two framings equivalent — the framing (what you count, what the potential is, what the safe set looks like) is what diversifies, not the underlying angle-chase. (Round 1: the lattice-descent and equilateral-witness slugs share the cut arithmetic but frame the exclusion completely differently — taint-casework vs. equilateral-as-single-witness.)
+ALWAYS: flag a shared wall explicitly in the report. (Round 1: three of four approaches' exclusion ultimately rests on the same 2×2 taint casework; if that casework is flawed they die together. The reviewer needs to know to push one approach off the shared wall.)

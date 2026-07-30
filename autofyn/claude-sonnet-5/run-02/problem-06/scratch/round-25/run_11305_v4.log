@@ -1,0 +1,8 @@
+[11305] n=25000 a_n=212744 distinct_types=335 elapsed=0.3s
+[11305] n=50000 a_n=414190 distinct_types=402 elapsed=0.7s
+[11305] n=100000 a_n=817082 distinct_types=481 elapsed=2.0s
+[11305] n=200000 a_n=1622866 distinct_types=584 elapsed=6.7s
+[11305] n=300000 a_n=2428664 distinct_types=651 elapsed=14.3s
+[11305] n=400000 a_n=3234450 distinct_types=702 elapsed=27.3s
+[11305] n=500000 a_n=4040260 distinct_types=737 elapsed=50.3s
+[11305] n=750000 a_n=6054730 distinct_types=806 elapsed=136.0s

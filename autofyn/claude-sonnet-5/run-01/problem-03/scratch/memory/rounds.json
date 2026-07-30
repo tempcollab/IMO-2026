@@ -1,0 +1,90 @@
+{
+  "pr_title": "IMO-2026-03: m=3,4 fully proved both directions; m≥5 Case C open (user-requested stop)",
+  "rounds": [
+    {
+      "n": 1,
+      "summary": "3 approaches partial: shared k>=1 gap found",
+      "ended_at": "2026-07-28T14:01:50Z"
+    },
+    {
+      "n": 2,
+      "summary": "Closed k=0/1 & n=1 gaps; new upper-bound lemmas DOM/HALVE",
+      "ended_at": "2026-07-28T14:38:34Z"
+    },
+    {
+      "n": 3,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T15:01:56Z"
+    },
+    {
+      "n": 4,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T15:33:16Z"
+    },
+    {
+      "n": 5,
+      "summary": "Caught up interrupted round-4 review; Lemma L now fully proved",
+      "ended_at": "2026-07-29T05:17:33Z"
+    },
+    {
+      "n": 6,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-29T05:39:27Z"
+    },
+    {
+      "n": 7,
+      "summary": "Caught up round 6; closed Prop K; refuted m=5 gap; 2 RETHINKs",
+      "ended_at": "2026-07-29T06:41:35Z"
+    },
+    {
+      "n": 8,
+      "summary": "Lower-bound gap (a) fully closed; both bounds narrowed to 1 sub-case each",
+      "ended_at": "2026-07-29T07:21:56Z"
+    },
+    {
+      "n": 9,
+      "summary": "Lower-bound single-cluster case closed twice; m=3 upper bound solved",
+      "ended_at": "2026-07-29T08:07:09Z"
+    },
+    {
+      "n": 10,
+      "summary": "Lower bound fully closed (multi-cluster lemma)",
+      "ended_at": "2026-07-29T08:49:33Z"
+    },
+    {
+      "n": 11,
+      "summary": "Case C: 2 routes + backup approach refuted, gap sharpened",
+      "ended_at": "2026-07-29T09:19:47Z"
+    },
+    {
+      "n": 12,
+      "summary": "Case C: budget-capped move passes adversarial gate, HALF-BOUND gap isolated",
+      "ended_at": "2026-07-29T10:23:46Z"
+    },
+    {
+      "n": 13,
+      "summary": "Found & retracted invalid mark-accounting bug in Case C gate",
+      "ended_at": "2026-07-29T11:16:00Z"
+    },
+    {
+      "n": 14,
+      "summary": "Fixed mark-accounting bug; Case C gap sharpened, averaging route killed",
+      "ended_at": "2026-07-29T11:55:43Z"
+    },
+    {
+      "n": 15,
+      "summary": "Killed Hall/König route; found new m=6 SLACK-COVER witness",
+      "ended_at": "2026-07-29T12:34:17Z"
+    },
+    {
+      "n": 16,
+      "summary": "m=4 Case C 2/3 closed (Regions 1&2); Region 3 + m≥5 open",
+      "ended_at": "2026-07-29T13:21:06Z"
+    },
+    {
+      "n": 17,
+      "summary": "m=4 Case C fully closed &amp; verified",
+      "ended_at": "2026-07-29T14:04:42Z"
+    }
+  ]
+}

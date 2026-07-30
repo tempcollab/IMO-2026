@@ -1,0 +1,11 @@
+=== n=4 cell vertex enumeration ===
+distributions: 70
+triples examined: 993300
+unique-solved systems: 0
+feasible (nonneg) vertices: 0
+distinct piece-multisets: 0
+min A (integer scale): None  (real: None)
+target: 1 (real: 1/31)
+VIOLATIONS (A<1): 0
+min config: None
+total time: 71.1s

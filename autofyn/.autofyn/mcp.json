@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "approach-ranker": {
+      "command": "python3",
+      "args": [".autofyn/approach_ranker.py"]
+    }
+  }
+}

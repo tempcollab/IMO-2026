@@ -1,0 +1,50 @@
+{
+  "pr_title": "IMO 2026 P6: complete proof — greedy sequence is eventually arithmetic (period T, shift L)",
+  "rounds": [
+    {
+      "n": 1,
+      "summary": "Reduce P6 to one finiteness crux; endgame certified",
+      "ended_at": "2026-07-28T14:06:57Z"
+    },
+    {
+      "n": 2,
+      "summary": "Crux narrowed to dynamics step; 2 routes killed, 2 lemmas cached",
+      "ended_at": "2026-07-28T14:40:19Z"
+    },
+    {
+      "n": 3,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T14:55:06Z"
+    },
+    {
+      "n": 4,
+      "summary": "Crux recast as value-ascent; 4 lemmas certified; GPC gap closed",
+      "ended_at": "2026-07-28T15:15:24Z"
+    },
+    {
+      "n": 5,
+      "summary": "Sub-gap (6a) closed via Lemma 6; 3 lemmas certified",
+      "ended_at": "2026-07-28T15:44:06Z"
+    },
+    {
+      "n": 7,
+      "summary": "Crux weakened FIN-W→FIN-Q; 4 lemmas certified; rewrite route dead",
+      "ended_at": "2026-07-28T18:28:11Z"
+    },
+    {
+      "n": 8,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T18:52:40Z"
+    },
+    {
+      "n": 9,
+      "summary": "Built round-8 set: 4 lemmas certified; 2 lanes self-cert dead",
+      "ended_at": "2026-07-28T20:07:14Z"
+    },
+    {
+      "n": 10,
+      "summary": "SOLVED imo-2026-06: aimo-0030 game-transplant proof, reviewer APPROVE",
+      "ended_at": "2026-07-28T20:39:20Z"
+    }
+  ]
+}

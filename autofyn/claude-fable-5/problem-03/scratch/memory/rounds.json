@@ -1,0 +1,25 @@
+{
+  "pr_title": "Solve IMO 2026 P3: c(n) = 2^n/(2^{n+1}−1), full proof verified",
+  "rounds": [
+    {
+      "n": 1,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T14:18:53Z"
+    },
+    {
+      "n": 2,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T15:03:32Z"
+    },
+    {
+      "n": 3,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T15:20:33Z"
+    },
+    {
+      "n": 4,
+      "summary": "SOLVED: proof-reviewer APPROVE, c(n)=2^n/(2^{n+1}-1)",
+      "ended_at": "2026-07-28T15:28:19Z"
+    }
+  ]
+}

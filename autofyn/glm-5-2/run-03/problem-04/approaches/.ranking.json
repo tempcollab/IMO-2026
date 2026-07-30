@@ -1,0 +1,50 @@
+{
+  "equilateral-witness": {
+    "copied_from": null,
+    "elo": 1484.7671167591582,
+    "expanded": 1,
+    "last_note": "Inclusion solid; Part A obtuse safe-set S for \u03b8>90\u00b0 is a genuine independent geometric exclusion (proven closed); Part B taint casework covers \u03b8\u226490\u00b0; refuted E-alone crux honestly fixed by enlarging to S.",
+    "last_outcome": "verified-milestone",
+    "last_round": 1,
+    "selected": 0,
+    "slug": "equilateral-witness",
+    "stale": true,
+    "summary": "Exclusion via a self-reproducing reflection-closed safe set S containing E (supplementary reflection beta<->180-beta); inclusion via the shared M1+M2 supplementary-climb chain."
+  },
+  "euclidean-needle": {
+    "copied_from": null,
+    "elo": 1454.0430238262613,
+    "expanded": 0,
+    "last_note": null,
+    "last_outcome": null,
+    "last_round": null,
+    "selected": 0,
+    "slug": "euclidean-needle",
+    "stale": false,
+    "summary": "Inclusion via needle-attraction then subtractive-Euclidean extraction of theta; exclusion via delta=180 mod theta blocking the Euclidean chain on a thin-needle safe set."
+  },
+  "lattice-descent": {
+    "copied_from": null,
+    "elo": 1545.8278203282016,
+    "expanded": 1,
+    "last_note": "Complete rigorous proof both directions (M1+M2 inclusion bound n-1; 2x2 taint casework exclusion incl. irrational/p>1/\u03b8>90); all flagged gaps closed; verified by hand+computation.",
+    "last_outcome": "verified-milestone",
+    "last_round": 1,
+    "selected": 0,
+    "slug": "lattice-descent",
+    "stale": true,
+    "summary": "Mulan wins iff theta=180/n: M1 alignment (pigeonhole multiple into both P-slots) + M2 descent (cut tracked m*theta vertex by theta), exclusion via 2x2 taint casework."
+  },
+  "residue-monovariant": {
+    "copied_from": null,
+    "elo": 1515.362039086379,
+    "expanded": 1,
+    "last_note": "Distinct \u03a6-monovariant crux honestly refuted by builder; fallback M1+M2+casework proof complete and correct; no overclaiming; redundant with lattice-descent.",
+    "last_outcome": "verified-milestone",
+    "last_round": 1,
+    "selected": 0,
+    "slug": "residue-monovariant",
+    "stale": true,
+    "summary": "Direct residue potential Phi=max r(angle) that Mulan strictly decreases on both children regardless of discard, landing at 0 iff theta|180, then M2 descent; exclusion via 2x2 casework."
+  }
+}

@@ -1,0 +1,77 @@
+======================================================================
+(1) GREEDY CASCADE reproduction (falsified by (12,4,3,2)/21, n=3)
+======================================================================
+config = (12,4,3,2)/21, n=3, target D <= 1/D_n = 1/15 = 0.066667
+greedy cascade: marks used = 2
+  refined multiset (x21): [5, 4, 4, 3, 3, 2]
+  D = 1/7 = 0.142857   D*21 = 3
+  D / target = 2.1429
+  VIOLATION: D = 1/7 > 1/D_n = 1/15  (greedy FALSIFIED)
+
+  Achieving strategy 'halve a_1 and a_4':
+    refined (x21): [6, 6, 4, 3, 1, 1]
+    D = 1/21 = 0.047619  (= a_2 - a_3 = 1/21 = 1/21)
+    D / target = 0.7143   <= 1: True
+
+======================================================================
+(2) GAP-SubsetSum exact test (a_1 <= 2^n/D_n regime)
+======================================================================
+n=2, Smax=60: 1720 compressed configs; a_1<=2^n/D_n regime: 1430 configs; subset-sum HIT 1230, MISS 200
+  MISS examples (a_1, threshold=0.5714):
+    (6, 4, 3) / 13   a_1=0.4615
+    (8, 5, 4) / 17   a_1=0.4706
+    (9, 6, 4) / 19   a_1=0.4737
+    (9, 6, 5) / 20   a_1=0.4500
+    (10, 6, 5) / 21   a_1=0.4762
+n=3, Smax=80: 22902 compressed configs; a_1<=2^n/D_n regime: 18946 configs; subset-sum HIT 15651, MISS 3295
+  MISS examples (a_1, threshold=0.5333):
+    (11, 5, 4, 3) / 23   a_1=0.4783
+    (10, 6, 5, 2) / 23   a_1=0.4348
+    (9, 7, 4, 3) / 23   a_1=0.3913
+    (8, 6, 5, 4) / 23   a_1=0.3478
+    (12, 6, 4, 3) / 25   a_1=0.4800
+n=4, Smax=60: 17188 compressed configs; a_1<=2^n/D_n regime: 14819 configs; subset-sum HIT 12211, MISS 2608
+  MISS examples (a_1, threshold=0.5161):
+    (11, 9, 5, 4, 3) / 32   a_1=0.3438
+    (17, 6, 5, 4, 3) / 35   a_1=0.4857
+    (12, 10, 6, 4, 3) / 35   a_1=0.3429
+    (12, 8, 7, 6, 2) / 35   a_1=0.3429
+    (10, 8, 7, 6, 5) / 36   a_1=0.2778
+
+======================================================================
+(3) RECURSIVE MULTI-PIECE SEARCH (tie-creating splits + halving)
+======================================================================
+
+--- n=2, Smax=50: 968 compressed configs ---
+  violations (D > 1/D_n, non-tower): 0
+  tower configs (boundary, D=1/D_n expected): 0
+  worst non-tower ratio: 0.9130 at (26, 13, 7) (S=46)
+    D = 3/23 = 0.130435, 1/D_n = 0.142857, strategy: orig-reproduce x1
+  large-top (a_1>2^n/D_n) configs: 160, of which D<=1/D_n: 160
+
+--- n=3, Smax=45: 2005 compressed configs ---
+  violations (D > 1/D_n, non-tower): 0
+  tower configs (boundary, D=1/D_n expected): 0
+  worst non-tower ratio: 0.8824 at (8, 4, 3, 2) (S=17)
+    D = 1/17 = 0.058824, 1/D_n = 0.066667, strategy: halve x1, orig-reproduce x1
+  large-top (a_1>2^n/D_n) configs: 334, of which D<=1/D_n: 334
+
+--- n=4, Smax=35: 258 compressed configs ---
+  violations (D > 1/D_n, non-tower): 0
+  tower configs (boundary, D=1/D_n expected): 0
+  worst non-tower ratio: 0.9394 at (16, 8, 4, 3, 2) (S=33)
+    D = 1/33 = 0.030303, 1/D_n = 0.032258, strategy: halve x1, orig-reproduce x2
+  large-top (a_1>2^n/D_n) configs: 12, of which D<=1/D_n: 12
+
+======================================================================
+(4) LARGE-TOP REGIME: what multi-piece patterns win?
+======================================================================
+
+--- n=3 large-top (a_1 > 2^n/D_n) winning strategies ---
+  total large-top configs: 1187
+    halve-only: 1187 configs; example: (11, 4, 3, 2)/S=20 D=1/20 (=0.05000) strat='halve x2' marks=2
+
+--- n=4 large-top (a_1 > 2^n/D_n) winning strategies ---
+  total large-top configs: 558
+    halve-only: 558 configs; example: (18, 5, 4, 3, 2)/S=32 D=0 (=0.00000) strat='halve x1, orig-reproduce x2' marks=3
+

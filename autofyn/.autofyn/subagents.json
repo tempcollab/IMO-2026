@@ -1,0 +1,47 @@
+[
+  {
+    "name": "math-explorer",
+    "type": "explore",
+    "description": "Scouts one aspect of the run's problem and its approach space (the orchestrator assigns a lens): reads the statement, the knowledge base, and the live approach population; reports the terrain — distinct openings, what has been tried, what dead-ended and why, which techniques look promising. Several run in parallel each round, each a different lens. Does NOT attempt the proof.",
+    "model": "sonnet",
+    "tools": ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "mcp__approach-ranker__sample_approaches"],
+    "prompt_file": ".autofyn/subagents/math-explorer.md",
+    "needs_run_state": true
+  },
+  {
+    "name": "proof-outliner",
+    "type": "plan",
+    "description": "Puts up a field of rival approaches for the run's one problem: opens new approaches, revises stuck ones, nominates live ones to advance, or asks to copy one with two viable gap-fills — each a slugged skeleton with the hard steps identified, not a finished proof. Hands the field to the outline-reviewer, which ranks and narrows it. Call after the explorers, once per round.",
+    "model": "opus",
+    "tools": ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "mcp__approach-ranker__sample_approaches"],
+    "prompt_file": ".autofyn/subagents/proof-outliner.md",
+    "needs_run_state": true
+  },
+  {
+    "name": "outline-reviewer",
+    "type": "review",
+    "description": "The ranking gate. Reviews the outliner's field of rival approaches BEFORE any proof effort: cuts the doomed (wrong technique, unjustified leaps, missing cases, circular reasoning), registers approved new approaches, copies any the outliner asks to branch, ranks the whole field head-to-head, and emits the build set. Runs every round.",
+    "model": "opus",
+    "tools": ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "mcp__approach-ranker__register_approach", "mcp__approach-ranker__copy_approach", "mcp__approach-ranker__update_ranking"],
+    "prompt_file": ".autofyn/subagents/outline-reviewer.md",
+    "needs_run_state": true
+  },
+  {
+    "name": "proof-builder",
+    "type": "build",
+    "description": "Owns one approach from the build set (the orchestrator assigns its slug) and fills its outline into a complete, rigorous prose proof: every step justified, every case settled, all computations shown. Writes to its own approach file. Builders run in parallel, one per slug. Call after the outline-reviewer emits the build set.",
+    "model": "opus",
+    "tools": ["Read", "Write", "Edit", "Glob", "Grep", "Bash"],
+    "prompt_file": ".autofyn/subagents/proof-builder.md",
+    "needs_run_state": true
+  },
+  {
+    "name": "proof-reviewer",
+    "type": "review",
+    "description": "Adversarially judges a candidate proof for correctness, rigor, and progress. Hunts for gaps, unproven claims, and skipped cases; decides solved/partial/unsolved and returns an APPROVE / CHANGES REQUESTED / RETHINK verdict. Call after every proof-builder attempt.",
+    "model": "opus",
+    "tools": ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "mcp__approach-ranker__record_outcome"],
+    "prompt_file": ".autofyn/subagents/proof-reviewer.md",
+    "needs_run_state": true
+  }
+]

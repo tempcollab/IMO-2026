@@ -1,0 +1,7 @@
+# proof-outliner — per-role rules
+
+ALWAYS: verify any closed-form identity a skeleton leans on with exact rational arithmetic (fractions.Fraction) before writing it into an approach — 30 seconds of python turned the imo-2026-03 recursion c(n)=c(n)/2+c(n-1)(1-c(n)) from a guess into a load-bearing verified step (round 1).
+ALWAYS: for shared prerequisite lemmas (e.g. greedy-claiming reduction), name ONE slug's builder to certify it into lemmas/ and have siblings import — sharing a settled lemma is not the single-gap trap; sharing a risky gap is (round 1).
+NEVER: propose an "answer-open" slug when the conjectured value is confirmed exactly at n=1 by hand and numerically to 8+ sig figs at n=2,3 — it wastes a builder; instead note that a bound refusing to close at the value is the trigger to reopen the answer (round 1).
+ALWAYS: before outlining a fix for a stuck move-process case, compute what the move vocabulary generates algebraically — Match chains + Bisects on a multiset realize exactly |sum c_i a_i|, c in {-1,0,+1} with budget m-1 automatic; this reframed U(m) Case 3 from strategy-search into subset-sum balancing, verified on 8600 instances in minutes (round 2).
+NEVER: adopt an explorer's absolute-value bound without checking both signs — the MultiMatch claim "|2a1-T| <= beta iff a1 < 2^{m-1}beta" covered only 2a1>=T; the correct self-contained sub-case threshold was a1 >= (2^{m-1}-1)beta, found by exact algebra (round 2).

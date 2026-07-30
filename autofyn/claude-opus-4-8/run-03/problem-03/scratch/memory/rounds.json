@@ -1,0 +1,100 @@
+{
+  "pr_title": "IMO 2026 P3: c(n)=2^n/(2^{n+1}-1) — lower bound + upper bound (both walls partial)",
+  "rounds": [
+    {
+      "n": 1,
+      "summary": "Answer c(n)=2^n/(2^{n+1}-1) confirmed; 2 partial approaches",
+      "ended_at": "2026-07-28T14:11:19Z"
+    },
+    {
+      "n": 2,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T14:39:24Z"
+    },
+    {
+      "n": 3,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T14:55:02Z"
+    },
+    {
+      "n": 4,
+      "summary": "Both live approaches advanced; 4 lemmas certified; shared wall found",
+      "ended_at": "2026-07-28T15:19:22Z"
+    },
+    {
+      "n": 5,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T15:51:43Z"
+    },
+    {
+      "n": 6,
+      "summary": "Executed R5's un-built set; all 4 advanced, 3 lemmas certified",
+      "ended_at": "2026-07-28T18:18:45Z"
+    },
+    {
+      "n": 7,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T18:52:45Z"
+    },
+    {
+      "n": 8,
+      "summary": "Built parity-measure+breakpoint-vertex; 4 lemmas; both walls isolated",
+      "ended_at": "2026-07-28T20:20:25Z"
+    },
+    {
+      "n": 9,
+      "summary": "Certified ONE-REC+BL; both walls now global-object residuals",
+      "ended_at": "2026-07-28T20:47:15Z"
+    },
+    {
+      "n": 10,
+      "summary": "Both leaders' object-families killed; switch to matching+pigeonhole",
+      "ended_at": "2026-07-28T21:25:54Z"
+    },
+    {
+      "n": 11,
+      "summary": "Structured-matching + density families killed; 2 lemmas certified",
+      "ended_at": "2026-07-28T21:53:23Z"
+    },
+    {
+      "n": 12,
+      "summary": "Both walls to cleaner residuals; covering-radius dead; 5 lemmas",
+      "ended_at": "2026-07-28T22:37:54Z"
+    },
+    {
+      "n": 13,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T23:10:24Z"
+    },
+    {
+      "n": 14,
+      "summary": "Both LP-dual levers gated-refuted; vertex-polytope framing dead",
+      "ended_at": "2026-07-29T01:36:31Z"
+    },
+    {
+      "n": 15,
+      "summary": "UPPER boundary closed exact (Lemma WTC); 2 dead lower levers",
+      "ended_at": "2026-07-29T02:17:50Z"
+    },
+    {
+      "n": 16,
+      "summary": "LOWER band-counting dead (9th lever); residual cross-scale",
+      "ended_at": "2026-07-29T02:54:51Z"
+    },
+    {
+      "n": 17,
+      "summary": "10th dead lower lever; UPPER tight sliver isolated",
+      "ended_at": "2026-07-29T03:25:44Z"
+    },
+    {
+      "n": 18,
+      "summary": "9th dead upper mech; UPPER needs Steinitz existence",
+      "ended_at": "2026-07-29T03:58:01Z"
+    },
+    {
+      "n": 19,
+      "summary": "UPPER re-targeted to min𝓡(A); 𝓡-object shared wall; 12th dead lower",
+      "ended_at": "2026-07-29T04:28:26Z"
+    }
+  ]
+}

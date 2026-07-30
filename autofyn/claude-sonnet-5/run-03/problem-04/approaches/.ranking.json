@@ -1,0 +1,38 @@
+{
+  "budget-partition-dimension": {
+    "copied_from": null,
+    "elo": 1500.0339081301693,
+    "expanded": 1,
+    "last_note": "Lemma A (residue one-move safety) correct and independently verified; but this file's own Lemma B construction (a0:=sqrt(2)*theta) is a real bug \u2014 invalid angle (>180 deg) for theta >~127.28 deg \u2014 so its converse is not actually complete as claimed for all theta, unlike chip-double-force's corrected a0:=theta/sqrt(2). Forward direction still not present here (by design, cites sibling). CHANGES REQUESTED.",
+    "last_outcome": "partial",
+    "last_round": 2,
+    "selected": 0,
+    "slug": "budget-partition-dimension",
+    "stale": true,
+    "summary": "Alternate divide-and-conquer (n=p+q) forward construction (unverified, likely unnecessary) plus a codimension/proper-subvariety framing for the converse that the outliner admits largely repackages chip-double-force's genericity argument."
+  },
+  "chip-double-force": {
+    "copied_from": null,
+    "elo": 1531.263693206478,
+    "expanded": 1,
+    "last_note": "Full proof (master formula, M1/M2 forward algorithm, residue-clean-invariant converse via Lemma A/B) independently re-derived and verified by reviewer: 3600-trial forward re-simulation and 300,000-trial Lemma A re-check both 0 failures, all algebra hand-checked; certified solved, APPROVE.",
+    "last_outcome": "verified-milestone",
+    "last_round": 2,
+    "selected": 0,
+    "slug": "chip-double-force",
+    "stale": true,
+    "summary": "Two-lemma (Double-Forcing + Chip-Reduction) explicit induction on n for the forward direction (verified end-to-end by simulation); genericity/pure-impure linear-independence argument sketched for the converse."
+  },
+  "three-distance-avoidance": {
+    "copied_from": null,
+    "elo": 1468.7023986633528,
+    "expanded": 0,
+    "last_note": null,
+    "last_outcome": null,
+    "last_round": null,
+    "selected": 0,
+    "slug": "three-distance-avoidance",
+    "stale": false,
+    "summary": "Imports chip-double-force's forward direction; attempts a group-primitivity / three-distance-theorem framing for the converse, currently just restates the n-integer dichotomy in group language without a proof mechanism connecting to the actual game."
+  }
+}

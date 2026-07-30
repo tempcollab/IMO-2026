@@ -1,0 +1,4 @@
+# math-explorer role rules (append rules here)
+
+NEVER: quantize game-state angles to a coarser grid for minimax memoization keys when states are continuous/half-integer — it MERGES distinct states and produces false "creeping up" win rates for losing theta (round 1: theta=72 false-rose 339->1551 across K=4..7 due to integer-degree quant of half-degree states). Always memoize on the EXACT integer tuple (run the game in 1/U-degree integer units so all angles are exact integers; never round).
+ALWAYS: for non-grid-aligned theta (e.g. 180/7), run the generalized exact search in 1/U-degree integer units (U = denominator so theta*U is integer); a fine float grid + tolerance gives false negatives because the critical alpha is off-grid and the tolerance window is narrower than the step (round 1: 180/7 with step 0.1/tol 0.02 reported all-False, but exact 1/7-grid confirms WIN at K=3).

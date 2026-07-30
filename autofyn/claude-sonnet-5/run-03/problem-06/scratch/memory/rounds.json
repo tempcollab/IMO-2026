@@ -1,0 +1,35 @@
+{
+  "pr_title": "imo-2026-06 solved: eventual periodicity proved via crux-aimo-0030-style global good-number purification argument",
+  "rounds": [
+    {
+      "n": 1,
+      "summary": "imo-2026-06: reduced to 1 open lemma, killed 1 dead framing",
+      "ended_at": "2026-07-28T13:57:50Z"
+    },
+    {
+      "n": 2,
+      "summary": "imo-2026-06: unified No-Escape gap into single Antichain Stabilization claim",
+      "ended_at": "2026-07-28T14:29:51Z"
+    },
+    {
+      "n": 3,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T14:39:38Z"
+    },
+    {
+      "n": 4,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T14:54:40Z"
+    },
+    {
+      "n": 5,
+      "summary": " ended without summary -- autocommit",
+      "ended_at": "2026-07-28T15:33:11Z"
+    },
+    {
+      "n": 6,
+      "summary": "SOLVED imo-2026-06: global purification proof bypasses antichain plateau",
+      "ended_at": "2026-07-29T05:04:30Z"
+    }
+  ]
+}
