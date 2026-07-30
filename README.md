@@ -4,33 +4,39 @@ Full process trails for every run reported in the accompanying paper, so that th
 
 ## Layout
 
-Runs are grouped by harness, then model, then run:
+Runs are grouped by harness, then model, then run. Cells that were repeated three times have `run-01/`, `run-02/`, `run-03/` subdirectories; cells that ran once do not.
 
 ```
 autofyn/<model>/[run-N/]problem-K/    multi-agent harness runs
-claude-code/<model>/run-N/            provider-agent runs (Claude Code)
+claude-code/<model>/[run-N/]          provider-agent runs (Claude Code)
 codex/<model>/                        provider-agent runs (Codex CLI)
-zcode/<model>/                        provider-agent runs (Zcode)
+zcode/<model>/[run-N/]                provider-agent runs (Zcode)
 webchat/<model>/                      web interface runs
 ```
 
-Each AutoFyn problem directory holds three files:
+Every run directory holds one audit file, `gpt-5.6-audit.md` or `fable-5-audit.md`, named for the model that audited it. No model audited its own run.
 
-| file | contents |
+## What each run contains
+
+**AutoFyn runs** have one directory per problem:
+
+| path | contents |
 | --- | --- |
-| `logs.jsonl` | tool calls, one JSON object per line |
-| `events.jsonl` | lifecycle and control events, including the submitted prompt |
-| `run.json` | run-level summary (model, timings, token and cost totals) |
+| `problem-K/logs.jsonl` | tool calls, one JSON object per line |
+| `problem-K/current.md` | the working proof state, including the final write-up and its status |
+| `problem-K/approaches/` | the distinct approaches the run explored |
+| `problem-K/lemmas/` | lemmas stated and proved along the way |
+| `problem-K/scratch/` | per-round subagent working notes |
 
-Provider-agent and web runs expose no tool-call trail, so those directories hold the graded write-up (`problem-K.md`) and the audit that scored it.
+Only `logs.jsonl` is present in every AutoFyn problem directory. The rest reflect what a given run actually produced, so a run that explored one approach has no `approaches/`, and four directories carry the write-up as `imo-2026-0K*.md` rather than `current.md`.
+
+**Provider-agent and web runs** expose no tool-call trail, so those directories hold the graded write-up for each problem as `problem-K.md`. The exception is `claude-code/claude-fable-5/`, which uses a `problem-K/` directory per problem and carries its own README describing it.
 
 ## Grading
 
-Every run was audited by a frontier model other than the one that produced it, under a fixed reviewer prompt. A panel of past IMO medalists then reviewed those audits. Each run directory contains its audit file alongside the write-up it scored, so both can be read together.
+Every run was audited by a frontier model other than the one that produced it, under a fixed reviewer prompt, and a panel of past IMO medalists then reviewed those audits. Each run's audit file sits beside the write-ups it scored, so both can be read together.
 
-## Timing
-
-Episode lengths in the paper are computed from `logs.jsonl` timestamps as the span from the first to the last event, minus every idle gap longer than five minutes. The gap subtraction removes time spent waiting on a rate-limit reset. The `duration_minutes` field in `run.json` is not the source for those figures.
+Note that the audit files for the two web runs with unreturned problems report a total over gradable problems only (`28/28`, `14/14`). The paper scores an unreturned problem as zero out of 42, so the same runs appear there as 28/42 and 14/42.
 
 ## Redactions
 
