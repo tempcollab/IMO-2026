@@ -28,7 +28,7 @@ Every run directory holds one `audit.md`. Each records a frontier model's audit 
 | `problem-K/lemmas/` | lemmas stated and proved along the way |
 | `problem-K/scratch/` | per-round subagent working notes |
 
-Only `logs.jsonl` is present in every AutoFyn problem directory. The rest reflect what a given run actually produced, so a run that explored one approach has no `approaches/`, and four directories carry the write-up as `imo-2026-0K*.md` rather than `current.md`. `logs.jsonl` holds tool calls alone; the lifecycle events the paper's episode times are computed from are not included here, so those times cannot be recomputed from this archive.
+Only `logs.jsonl` is present in every AutoFyn problem directory. The rest reflect what a given run actually produced, so a run that explored one approach has no `approaches/`, and four directories carry the write-up as `imo-2026-0K*.md` rather than `current.md`. 
 
 **Provider-agent and web runs** expose no tool-call trail, so those directories hold the graded write-up for each problem as `problem-K.md`, and nothing else for the web runs. Some Claude Code and Zcode runs also kept a `code/` directory holding the verification scripts that run wrote and ran. The exception to the naming is `claude-code/claude-fable-5/`, which uses a `problem-K/` directory per problem and carries its own README describing it.
 
