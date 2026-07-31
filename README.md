@@ -32,6 +32,10 @@ Only `logs.jsonl` is present in every AutoFyn problem directory. The rest reflec
 
 **Provider-agent and web runs** expose no tool-call trail, so those directories hold the graded write-up for each problem as `problem-K.md`. The exception is `claude-code/claude-fable-5/`, which uses a `problem-K/` directory per problem and carries its own README describing it.
 
+## Retrieval corpus
+
+`corpus/` holds the fixed pre-2026 corpus the AutoFyn runs retrieve from. `past_problems_database.json` has 1026 problems from olympiads and national team selection tests between 2006 and 2025, and `past_crux_moves_database.json` has 2434 crux moves extracted from their solutions. Every entry predates the 2026 contest. The web and provider-agent harnesses carry no corpus.
+
 ## Grading
 
 Every run was audited by a frontier model other than the one that produced it, under a fixed reviewer prompt, and a panel of past IMO medalists then reviewed those audits. Each run's audit file sits beside the write-ups it scored, so both can be read together.
