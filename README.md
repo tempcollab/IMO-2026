@@ -14,7 +14,7 @@ zcode/<model>/[run-N/]                provider-agent runs (Zcode)
 webchat/<model>/                      web interface runs
 ```
 
-Every run directory holds one audit file, `gpt-5.6-audit.md` or `fable-5-audit.md`, named for the model that audited it. No model audited its own run.
+Every run directory holds one `audit.md`. Each records a frontier model's audit of that run, which a panel of past IMO medalists then reviewed, so the scores in it are the outcome of both stages rather than the model's verdict alone. No model audited its own run: Claude and GLM runs were audited by GPT-5.6, and GPT-5.6 runs by Claude Fable 5.
 
 ## What each run contains
 
